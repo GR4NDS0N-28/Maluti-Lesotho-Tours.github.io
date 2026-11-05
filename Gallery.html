@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maluti Lesotho Tours - Gallery</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Our Photo Gallery</h1>
+    <p>Beautiful Lesotho</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <button type="button" onclick="changeMode()">Dark/Light</button>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Lesotho Tourism Gallery</h2>
+      <p>Click a photo to view it larger. Use the buttons to filter by category.</p>
+
+      <div class="filter-buttons">
+        <button type="button" onclick="filterImages('all')">All</button>
+        <button type="button" onclick="filterImages('mountains')">Mountains</button>
+        <button type="button" onclick="filterImages('culture')">Culture</button>
+        <button type="button" onclick="filterImages('water')">Water</button>
+      </div>
+
+      <img id="bigImage" src="prev.jpg">
+
+      <div class="gallery-controls">
+        <button type="button" onclick="prevImage()">Previous</button>
+        <button type="button" onclick="nextImage()">Next</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#imageModal">
+          View Modal
+        </button>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>All Photos</h2>
+
+      <div class="container px-0">
+        <div class="row g-4" id="galleryGrid">
+          <div class="col-md-6 col-lg-4 gallery-item mountains">
+            <div class="card gallery-card">
+              <img src="moutafri.jpg" alt="Afriski Mountain" onclick="showImage(this)">
+              <div class="card-body">
+                <p>Afriski <span class="badge bg-primary">Mountains</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item culture">
+            <div class="card gallery-card">
+              <img src="hats.jpg" alt="Basotho Hat" onclick="showImage(this)">
+              <div class="card-body">
+                <p>Basotho Culture <span class="badge bg-success">Culture</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item water">
+            <div class="card gallery-card">
+              <img src="katse2.jpg" alt="Katse Dam" onclick="showImage(this)">
+              <div class="card-body">
+                <p>Katse Dam <span class="badge bg-info">Water</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item mountains">
+            <div class="card gallery-card">
+              <img src="sp.webp" alt="Sani Pass" onclick="showImage(this)">
+              <div class="card-body">
+                <p>Sani Pass <span class="badge bg-primary">Mountains</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item water">
+            <div class="card gallery-card">
+              <img src="tsutsu.jpg" alt="Maletsunyane Falls" onclick="showImage(this)">
+              <div class="card-body">
+                <p>Maletsunyane Falls <span class="badge bg-info">Water</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 gallery-item culture">
+            <div class="card gallery-card">
+              <img src="bosiu.jpg" alt="Thaba Bosiu" onclick="showImage(this)">
+              <div class="card-body">
+                <p>Thaba Bosiu <span class="badge bg-success">Culture</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title fs-5" id="modalTitle">Image Preview</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="image.jpg" alt="Selected gallery photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Maluti Lesotho Tours</p>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

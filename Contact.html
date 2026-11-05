@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maluti Lesotho Tours - Contact</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <p>Maluti Lesotho Tours Maseru</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <button type="button" onclick="changeMode()">Dark/Light</button>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Find Us</h2>
+      <div class="find-us">
+        <img class="office-image" src="tourloc.jpg" alt="Maluti Lesotho Tours office">
+        <p><strong>Phone:</strong> +266 63752145</p>
+        <p><strong>Email:</strong> info@malutilesotho.co.org</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Contact Form</h2>
+      <div id="alert1" aria-live="polite"></div>
+
+      <form id="contactForm" class="form-card" novalidate>
+        <label class="form-label" for="name1">Full Name</label>
+        <input class="form-control" type="text" id="name1" placeholder="Enter your name" required>
+        <p id="errorName1" class="error-message"></p>
+
+        <label class="form-label" for="email1">Email</label>
+        <input class="form-control" type="email" id="email1" placeholder="Enter your email" required>
+        <p id="errorEmail1" class="error-message"></p>
+
+        <label class="form-label" for="subject1">Subject</label>
+        <input class="form-control" type="text" id="subject1" placeholder="Subject" required>
+
+        <label class="form-label" for="message1">Message</label>
+        <textarea class="form-control" id="message1" rows="4" placeholder="Your message" required></textarea>
+        <p id="errorMessage1" class="error-message"></p>
+
+        <button type="button" onclick="validateContact()" class="btn btn-primary mt-3">
+          Send Message
+        </button>
+        <p id="success1" class="success-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Book a Tour</h2>
+      <div id="alert2" aria-live="polite"></div>
+
+      <form id="bookingForm" class="form-card" novalidate>
+        <label class="form-label" for="name2">Full Name</label>
+        <input class="form-control" type="text" id="name2" placeholder="Enter your full name" required>
+        <p id="errorName2" class="error-message"></p>
+
+        <label class="form-label" for="email2">Email</label>
+        <input class="form-control" type="email" id="email2" placeholder="Enter your email" required>
+        <p id="errorEmail2" class="error-message"></p>
+
+        <label class="form-label" for="phone2">Phone Number</label>
+        <input class="form-control" type="tel" id="phone2" placeholder="+266..." required>
+        <p id="errorPhone2" class="error-message"></p>
+
+        <label class="form-label" for="destination">Destination</label>
+        <select class="form-select" id="destination" required>
+          <option value="">-- Select a destination --</option>
+          <option value="Afriski">Afriski</option>
+          <option value="Thaba Bosiu">Thaba Bosiu</option>
+          <option value="Maletsunyane Falls">Maletsunyane Falls</option>
+          <option value="Katse Dam">Katse Dam</option>
+        </select>
+
+        <label class="form-label" for="date2">Date</label>
+        <input class="form-control" type="date" id="date2" required>
+
+        <label class="form-label" for="people2">Number of People</label>
+        <input class="form-control" type="number" id="people2" min="1" max="20" value="1" required>
+        <p id="errorPeople2" class="error-message"></p>
+
+        <label class="form-label" for="info2">Additional Information</label>
+        <textarea class="form-control" id="info2" rows="3" placeholder="Any special requests?"></textarea>
+
+        <button type="button" onclick="validateBooking()" class="btn btn-success mt-3">
+          Book Now
+        </button>
+        <p id="success2" class="success-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Maluti Lesotho Tours</p>
+  </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

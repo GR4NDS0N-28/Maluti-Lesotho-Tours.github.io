@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maluti Lesotho Tours - Home</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+  <header>
+    <h1>Maluti Lesotho Tours</h1>
+    <p>Explore the Mountain Kingdom</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <button type="button" onclick="changeMode()">Dark/Light</button>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Welcome to Lesotho</h2>
+      <p>Visit beautiful places like Katse Dam, Afriski, Thaba Bosiu and Maletsunyane Falls.</p>
+
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="mountains.jpg" alt="Lesotho Mountains">
+          </div>
+          <div class="carousel-item">
+            <img src="katse.jpg" alt="Katse Dam">
+          </div>
+          <div class="carousel-item">
+            <img src="Basotho.jpg" alt="Basotho Culture">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Top 4 Destinations</h2>
+
+      <div class="container px-0">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <img src="katse dam.webp" class="card-img-top" alt="Katse Dam">
+              <div class="card-body">
+                <h3>Katse Dam</h3>
+                <p>Discover the remarkable dam and its surrounding mountain scenery.</p>
+                <button class="btn btn-primary" onclick="bookNow('Katse Dam', 350)">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <img src="Afriski.jpg" class="card-img-top" alt="Afriski">
+              <div class="card-body">
+                <h3>Afriski</h3>
+                <p>Enjoy skiing and mountain adventures in the highlands.</p>
+                <button class="btn btn-primary" onclick="bookNow('Afriski', 500)">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <img src="Thaba-bosiu.jpg" class="card-img-top" alt="Thaba Bosiu">
+              <div class="card-body">
+                <h3>Thaba Bosiu</h3>
+                <p>Explore an important historic site and fortress.</p>
+                <button class="btn btn-primary" onclick="bookNow('Thaba Bosiu', 300)">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card">
+              <img src="  Maletsunaye.jpg" class="card-img-top" alt="Maletsunyane Falls">
+              <div class="card-body">
+                <h3>Maletsunyane Falls</h3>
+                <p>Take in the spectacular 192-metre waterfall.</p>
+                <button class="btn btn-primary" onclick="bookNow('Maletsunyane Falls', 400)">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p id="bookingMessage" style="text-align:center; color:green; font-weight:bold;"></p>
+    </section>
+
+    <section>
+      <h2>Price List</h2>
+      <table>
+        <tr>
+          <th>Destination</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Katse Dam Tour</td>
+          <td>M350</td>
+        </tr>
+        <tr>
+          <td>Afriski Tour</td>
+          <td>M500</td>
+        </tr>
+        <tr>
+          <td>Thaba Bosiu</td>
+          <td>M300</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Booking Calculator</h2>
+      <p>People: <input type="number" id="people" value="1" min="1"></p>
+      <p>Days: <input type="number" id="days" value="1" min="1"></p>
+      <button type="button" onclick="calculateCost()">Calculate Price</button>
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Maluti Lesotho Tours
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

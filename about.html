@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maluti Lesotho Tours - About</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <header>
+    <h1>About Maluti Lesotho Tours</h1>
+    <p>Your Local Guide to Lesotho</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <button type="button" onclick="changeMode()">Dark/Light</button>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Who We Are</h2>
+      <div class="content-card">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <img class="about-image" src="team.jpg" alt="Maluti Lesotho Tours team">
+          </div>
+          <div class="col-md-6">
+            <p>
+              Maluti Lesotho Tours is a small company from Butha-Buthe, started in 2024.
+              We love Lesotho and want to show visitors its beautiful mountains, culture,
+              and history.
+            </p>
+            <p>
+              Our mission is to help local people find work through tourism and to share
+              the beauty of Lesotho with the world.
+            </p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#teamModal">
+              Meet Our Team
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Our Story</h2>
+      <article class="content-card">
+        <p>
+          We started with one car and one guide. Today, we have five guides and work
+          with hotels and restaurants throughout Lesotho. We have helped more than
+          200 visitors explore our country.
+        </p>
+        <img class="story-image" src="tour1.jpg" alt="Our first tour in Lesotho">
+      </article>
+    </section>
+
+    <section>
+      <h2>Our Values</h2>
+      <div class="content-card">
+        <ul class="values-list">
+          <li>Respect Basotho culture</li>
+          <li>Help keep the environment clean</li>
+          <li>Support local communities</li>
+          <li>Provide safe, welcoming tours</li>
+        </ul>
+
+        <h3 class="mt-4 mb-3">Team Members</h3>
+        <div class="table-responsive team-table">
+          <table class="table table-striped table-hover mb-0">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Teboho</td>
+                <td>Tour Guide</td>
+                <td>1 year</td>
+              </tr>
+              <tr>
+                <td>Mpho</td>
+                <td>Manager</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <td>Thabo</td>
+                <td>Driver</td>
+                <td>1 year</td>
+              </tr>
+              <tr>
+                <td>Lesole</td>
+                <td>Driver</td>
+                <td>2 years</td>
+              </tr>
+              <tr>
+                <td>Sentle</td>
+                <td>Tour Guide</td>
+                <td>1 year</td>
+              </tr>
+              <tr>
+                <td>Shelile</td>
+                <td>Tour Guide</td>
+                <td>2 years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <aside>
+      <h3>
+        Why Choose Us?
+        <span class="badge bg-success">Trusted</span>
+      </h3>
+      <p>
+        We are local, know the mountain roads, and speak both Sesotho and English.
+      </p>
+      <div class="alert alert-info mb-0">
+        Special offer: 20% off for students!
+      </div>
+    </aside>
+
+    <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title fs-5" id="teamModalTitle">Our Team</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="team.jpg" alt="Maluti Lesotho Tours team photo">
+            <p>We are 6 friendly Basotho guides ready to show you Lesotho.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Our Office</h2>
+      <div class="content-card">
+        <p id="officeInfo">Click the button to see our office information.</p>
+        <button type="button" onclick="showOffice()" class="btn btn-success">
+          Show Office Location
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Maluti Lesotho Tours</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
